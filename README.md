@@ -1,4 +1,4 @@
-# 🩺 AI-Powered Disease Prediction & Medical Recommendation System
+# 🩺 Disease Prediction System
 
 An end-to-end **Machine Learning–based Intelligent Healthcare Assistant** that predicts diseases from user-reported symptoms and provides complete medical guidance — including disease description, precautions, medications, diet plans, and workout suggestions.
 
