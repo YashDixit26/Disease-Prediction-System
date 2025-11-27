@@ -8,15 +8,16 @@ This project bridges the gap between raw medical datasets and real-world usabili
 
 ## 🚀 Why This Project Is Different
 
-Unlike basic disease prediction projects that only return a label, this system is designed to behave like a **digital health assistant**:
+Most disease prediction systems stop at simply outputting a disease name.  
+This project goes several steps further — it behaves like a **real-world AI healthcare assistant**, not just a classification model.
 
-✅ Understands imperfect symptom input (even with spelling mistakes)  
-✅ Uses symptom severity weighting instead of plain 0/1 values  
-✅ Handles class imbalance using SMOTE  
-✅ Compares and tunes multiple ML models (Random Forest & XGBoost)  
-✅ Returns a full medical guidance package — not just a prediction  
+What makes it truly stand out:
 
-It doesn’t just predict a disease — **it explains it and guides the user forward.**
+✅ **Understands imperfect human input**  
+People don’t always know or remember exact medical terms. This system is built for real users, not just perfect datasets. It uses smart fuzzy matching to recognize and correct misspelled or incomplete symptom names — making health prediction more accessible, even for non-technical users.
+
+✅ **Severity-aware intelligence**  
+Instead of assuming every symptom has the same importance, the model intelligently assigns severity weights to each symptom. This allows more critical symptoms (like high fever or chest pain) to influence predictions more strongly than minor ones — resulting in more realistic and medically meaningful outcomes.
 
 ---
 
@@ -54,7 +55,7 @@ Makes the system user-friendly:
 
 ---
 
-## ⚙️ How It Works (Pipeline Overview)
+## ⚙️ How It Works 
 
 1️⃣ User enters **5–10 symptoms** (written naturally)  
 2️⃣ System corrects spelling using fuzzy matching  
@@ -86,5 +87,32 @@ All this happens in a smooth, single flow.
 
 ---
 
-## 📂 Project Structure
+### 📚 Libraries and Their Roles
+
+| Library                     | Purpose in This Project |
+|-----------------------------|---------------------------|
+| **NumPy**                   | Used for numerical computations and handling symptom vectors and arrays. |
+| **Pandas**                  | Used for loading, cleaning, manipulating, and analyzing datasets (CSV files). |
+| **Scikit-learn**            | Core machine learning library used for preprocessing, model training, evaluation, and hyperparameter tuning. |
+| **XGBoost**                 | Used for building and training the XGBoost classification model for disease prediction. |
+| **Imbalanced-learn (SMOTE)** | Used to handle class imbalance by generating synthetic samples for minority disease classes. |
+| **FuzzyWuzzy**              | Used to perform fuzzy string matching for correcting and matching user-entered symptom spellings. |
+| **Matplotlib**              | Used for data visualization like bar charts, model performance plots, and statistical graphs. |
+| **Seaborn**                 | Used for advanced visualizations such as heatmaps for symptom correlation and disease-symptom relationships. |
+
+
+---
+
+## ⚠️ Important Disclaimer
+
+This system is intended for **educational and research purposes only**.
+
+It is **NOT** a substitute for professional medical advice, diagnosis, or treatment.  
+Always consult a qualified healthcare professional for medical concerns.
+
+---
+
+## 👨‍💻 Author
+
+**Yash Dixit**  
 
